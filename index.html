@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diana & Mateo - 08.08.2026</title>
+  <meta name="description" content="Boda de Diana y Mateo - 8 de Agosto, 2026 - Hacienda El Jardín Secreto, Tenjo, Cundinamarca">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23D4B896'>♥</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --gold: #B8860B;
+      --gold-light: #C4A265;
+      --cream: #FAF8F5;
+      --charcoal: #4A3728;
+      --white: #FFFFFF;
+      --gold-soft: #D4B896;
+      --cream-dark: #F0EBE3;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      color: var(--charcoal);
+      background-color: var(--cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* ── Language Toggle ── */
+    .lang-toggle {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 1000;
+      display: flex;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(8px);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+      border: 1px solid var(--gold-soft);
+    }
+
+    .lang-toggle button {
+      border: none;
+      background: transparent;
+      padding: 8px 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--charcoal);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      min-width: 48px;
+      min-height: 40px;
+    }
+
+    .lang-toggle button.active {
+      background: var(--gold);
+      color: var(--white);
+    }
+
+    /* ── Section Shared ── */
+    section {
+      padding: 60px 20px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      font-weight: 300;
+      color: var(--gold);
+      text-align: center;
+      margin-bottom: 12px;
+      letter-spacing: 0.04em;
+    }
+
+    .section-subtitle {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.75rem, 2vw, 0.85rem);
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      text-align: center;
+      color: var(--charcoal);
+      opacity: 0.7;
+      margin-bottom: 40px;
+    }
+
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--gold-light);
+      margin: 0 auto 40px;
+    }
+
+    /* ── Photo Break ── */
+    .photo-break {
+      width: 100%;
+      height: 45vh;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .photo-break img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 50%;
+      display: block;
+    }
+
+    .photo-pair {
+      display: flex;
+      gap: 12px;
+      padding: 50px 20px;
+      justify-content: center;
+      background: var(--cream-dark);
+    }
+
+    .photo-pair img {
+      width: calc(50% - 6px);
+      max-width: 380px;
+      border-radius: 10px;
+      box-shadow: 0 8px 30px rgba(74, 55, 40, 0.12);
+      object-fit: cover;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative;
+      height: 100vh;
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: url('portada.jpg') center center / cover no-repeat;
+      z-index: 0;
+    }
+
+    .hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(40, 30, 20, 0.35) 0%,
+        rgba(40, 30, 20, 0.5) 40%,
+        rgba(40, 30, 20, 0.65) 100%
+      );
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-names {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(3.5rem, 13vw, 7rem);
+      color: var(--white);
+      line-height: 1.05;
+      text-shadow: 0 2px 30px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-names .amp {
+      display: block;
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(2rem, 7vw, 3.5rem);
+      margin: -10px 0 30px;
+      line-height: 1;
+      color: var(--gold-soft);
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero-date {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.9rem, 3vw, 1.15rem);
+      font-weight: 400;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-top: 150px;
+      text-shadow: 0 1px 12px rgba(0, 0, 0, 0.5);
+    }
+
+    .scroll-arrow {
+      position: absolute;
+      bottom: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      animation: bounce 2s infinite;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 12px;
+    }
+
+    .scroll-arrow svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--white);
+      opacity: 0.8;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+      40% { transform: translateX(-50%) translateY(-10px); }
+      60% { transform: translateX(-50%) translateY(-5px); }
+    }
+
+    /* ── Countdown ── */
+    .countdown-section {
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .countdown-grid {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .countdown-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 70px;
+    }
+
+    .countdown-number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.5rem, 8vw, 3.5rem);
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .countdown-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.65rem;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--charcoal);
+      opacity: 0.6;
+      margin-top: 6px;
+    }
+
+    /* ── RSVP / Confirma ── */
+    .rsvp-section {
+      background: var(--cream-dark);
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .rsvp-section .section-title {
+      color: var(--gold);
+    }
+
+    .rsvp-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      color: var(--charcoal);
+      opacity: 0.85;
+      max-width: 500px;
+      margin: 0 auto 32px;
+      line-height: 1.7;
+    }
+
+    .rsvp-btn {
+      display: inline-block;
+      padding: 16px 48px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.85rem, 2.5vw, 1rem);
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--charcoal);
+      background: var(--gold-soft);
+      border-radius: 50px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+      min-height: 48px;
+    }
+
+    .rsvp-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(0, 0, 0, 0.25);
+      background: var(--gold-light);
+      color: var(--white);
+    }
+
+    /* ── Ceremony & Reception ── */
+    .ceremony-section {
+      background: var(--white);
+      text-align: center;
+    }
+
+    .venue-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.4rem, 4vw, 1.8rem);
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 8px;
+    }
+
+    .venue-detail {
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(0.8rem, 2.2vw, 0.9rem);
+      font-weight: 300;
+      color: var(--charcoal);
+      opacity: 0.75;
+      margin-bottom: 6px;
+      line-height: 1.6;
+    }
+
+    .location-row {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 900px;
+      margin: 32px auto 0;
+    }
+
+    .map-container {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+    }
+
+    .travel-tips {
+      text-align: left;
+      background: var(--cream);
+      padding: 28px;
+      border-radius: 12px;
+      border-left: 3px solid var(--gold-light);
+    }
+
+    .travel-tips h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .travel-tips ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .travel-tips li {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--charcoal);
+      padding-left: 20px;
+      position: relative;
+      margin-bottom: 12px;
+    }
+
+    .travel-tips li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 8px;
+      width: 6px;
+      height: 6px;
+      background: var(--gold-light);
+      border-radius: 50%;
+    }
+
+    .travel-tips .warning {
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    /* ── Dress Code ── */
+    .dresscode-section {
+      background: var(--cream);
+      text-align: center;
+    }
+
+    .dresscode-formal {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.3rem, 4vw, 1.6rem);
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    .dresscode-group {
+      margin-bottom: 28px;
+    }
+
+    .dresscode-group-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--charcoal);
+      margin-bottom: 14px;
+    }
+
+    .restricted-colors {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .color-chip {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .color-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 2px solid rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    .color-circle::after {
+      display: none;
+    }
+
+    .color-chip span {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 400;
+      color: var(--charcoal);
+      opacity: 0.7;
+    }
+
+    /* ── Info Section ── */
+    .info-section {
+      background: var(--white);
+      text-align: center;
+    }
+
+    .info-cards {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .info-card {
+      background: var(--cream);
+      padding: 28px 24px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .info-card-icon {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .info-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .info-card p {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 300;
+      line-height: 1.7;
+      color: var(--charcoal);
+      opacity: 0.8;
+    }
+
+    /* ── Footer ── */
+    .footer {
+      background: var(--cream-dark);
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .footer-names {
+      font-family: 'Great Vibes', cursive;
+      font-size: clamp(2rem, 7vw, 3rem);
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .footer-date {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 300;
+      letter-spacing: 0.2em;
+      color: var(--charcoal);
+      opacity: 0.6;
+      margin-bottom: 28px;
+    }
+
+    .footer .rsvp-btn {
+      padding: 14px 40px;
+      font-size: 0.8rem;
+    }
+
+    /* ── Tablet ── */
+    @media (min-width: 768px) {
+      section {
+        padding: 80px 40px;
+      }
+
+      .countdown-grid {
+        gap: 32px;
+      }
+
+      .countdown-item {
+        min-width: 90px;
+      }
+
+      .info-cards {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .map-container iframe {
+        height: 350px;
+      }
+
+      .photo-break {
+        height: 50vh;
+      }
+    }
+
+    /* ── Desktop ── */
+    @media (min-width: 1024px) {
+      section {
+        padding: 100px 60px;
+      }
+
+      .info-cards {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .photo-break {
+        height: 55vh;
+      }
+
+      .location-row {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 80px;
+      }
+
+      .location-row .map-container {
+        flex: 1;
+      }
+
+      .location-row .map-container iframe {
+        height: 100%;
+      }
+
+      .location-row .travel-tips {
+        flex: 1;
+      }
+    }
+
+    /* ── Fade-in Animation ── */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Language Toggle -->
+  <div class="lang-toggle" role="group" aria-label="Language selector">
+    <button id="btn-es" class="active" onclick="setLang('es')">ES</button>
+    <button id="btn-en" onclick="setLang('en')">EN</button>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" role="img" aria-label="Diana y Mateo"></div>
+    <div class="hero-content fade-in">
+      <h1 class="hero-names">
+        Diana
+        <span class="amp" data-lang="hero-amp">y</span>
+        Mateo
+      </h1>
+      <div class="hero-line"></div>
+      <p class="hero-date" data-lang="hero-date">8 de Agosto, 2026</p>
+    </div>
+    <button class="scroll-arrow" onclick="document.getElementById('countdown').scrollIntoView({behavior:'smooth'})" aria-label="Scroll down">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </section>
+
+  <!-- Countdown -->
+  <section class="countdown-section" id="countdown">
+    <h2 class="section-title fade-in" data-lang="countdown-title">Faltan</h2>
+    <div class="divider"></div>
+    <div class="countdown-grid fade-in">
+      <div class="countdown-item">
+        <span class="countdown-number" id="cd-days">---</span>
+        <span class="countdown-label" data-lang="cd-days">Días</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" id="cd-hours">--</span>
+        <span class="countdown-label" data-lang="cd-hours">Horas</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" id="cd-mins">--</span>
+        <span class="countdown-label" data-lang="cd-mins">Minutos</span>
+      </div>
+      <div class="countdown-item">
+        <span class="countdown-number" id="cd-secs">--</span>
+        <span class="countdown-label" data-lang="cd-secs">Segundos</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="rsvp-section" id="rsvp">
+    <h2 class="section-title fade-in" data-lang="rsvp-title">Confirma tu asistencia</h2>
+    <div class="divider" style="background: var(--gold-soft); opacity: 0.4;"></div>
+    <p class="rsvp-text fade-in" data-lang="rsvp-text">Tu presencia es el mejor regalo que podemos recibir. Por favor confirma tu asistencia.</p>
+    <a href="https://www.magnoeventos.net/events/mateo-diana" target="_blank" rel="noopener" class="rsvp-btn fade-in" data-lang="rsvp-btn">Confirmar Asistencia</a>
+  </section>
+
+  <!-- Photo break 1 -->
+  <div class="photo-break">
+    <img src="IMG_1025.jpg" alt="Diana y Mateo" loading="lazy">
+  </div>
+
+  <!-- Ceremony & Reception -->
+  <section class="ceremony-section" id="ceremony">
+    <h2 class="section-title fade-in" data-lang="ceremony-title">Ceremonia & Recepción</h2>
+    <p class="section-subtitle fade-in" data-lang="ceremony-subtitle">Todo en un solo lugar</p>
+    <div class="divider"></div>
+
+    <div class="fade-in">
+      <p class="venue-name" data-lang="venue-name">Hacienda El Jardín Secreto</p>
+      <p class="venue-detail" data-lang="venue-address">Km 4 vía Tenjo – La Punta, Tenjo, Cundinamarca</p>
+      <p class="venue-detail" data-lang="venue-datetime">Sábado 8 de Agosto, 2026 — 3:00 PM</p>
+    </div>
+
+    <div class="location-row fade-in">
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.1!2d-74.1761557!3d4.8488415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f805fd8106caf%3A0xdf158dbe84ad7f5e!2sHacienda+El+Jardin+Secreto!5e0!3m2!1ses!2sco!4v1700000000000!5m2!1ses!2sco"
+          allowfullscreen
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Hacienda El Jardín Secreto - Mapa">
+        </iframe>
+      </div>
+
+      <div class="travel-tips">
+      <h3 data-lang="travel-title">Cómo Llegar</h3>
+      <ul>
+        <li data-lang="travel-1">Dirígete primero a Tenjo y luego toma la vía hacia la Hacienda.</li>
+        <li><span class="warning" data-lang="travel-2">Importante:</span> <span data-lang="travel-2b">Google Maps o Waze pueden sugerir rutas alternas con vías sin pavimentar o en mal estado. Evítalas y sigue la ruta principal por Tenjo.</span></li>
+        <li data-lang="travel-3">Tenjo está a 1–2 horas de Bogotá dependiendo del tráfico. Planifica con tiempo.</li>
+        <li data-lang="travel-4">Si la fiesta se extiende, recomendamos tener un conductor designado.</li>
+      </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dress Code -->
+  <section class="dresscode-section" id="dresscode">
+    <h2 class="section-title fade-in" data-lang="dress-title">Código de vestimenta</h2>
+    <div class="divider"></div>
+    <p class="dresscode-formal fade-in" data-lang="dress-formal">Traje Formal</p>
+
+    <div class="fade-in">
+      <div class="dresscode-group">
+        <p class="dresscode-group-title" data-lang="dress-women">Mujeres — Colores restringidos</p>
+        <div class="restricted-colors">
+          <div class="color-chip">
+            <div class="color-circle" style="background: #111111;"></div>
+            <span data-lang="color-black">Negro</span>
+          </div>
+          <div class="color-chip">
+            <div class="color-circle" style="background: #C0392B;"></div>
+            <span data-lang="color-red">Rojo</span>
+          </div>
+          <div class="color-chip">
+            <div class="color-circle" style="background: #89CFF0;"></div>
+            <span data-lang="color-lightblue">Azul claro</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="dresscode-group">
+        <p class="dresscode-group-title" data-lang="dress-men">Hombres — Colores restringidos</p>
+        <div class="restricted-colors">
+          <div class="color-chip">
+            <div class="color-circle" style="background: #1B3A5C;"></div>
+            <span data-lang="color-darkblue">Azul oscuro</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Important Info -->
+  <section class="info-section" id="info">
+    <h2 class="section-title fade-in" data-lang="info-title">Información importante</h2>
+    <div class="divider"></div>
+    <div class="info-cards fade-in">
+      <div class="info-card">
+        <div class="info-card-icon" aria-hidden="true">&#9993;</div>
+        <h3 data-lang="info-envelope-title">Lluvia de sobres</h3>
+        <p data-lang="info-envelope-text">Si deseas hacernos un regalo, lo recibiremos con mucho cariño en forma de sobre el día de la boda.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon" aria-hidden="true">&#9993;</div>
+        <h3 data-lang="info-personal-title">Invitación personal</h3>
+        <p data-lang="info-personal-text">La invitación es personal e intransferible. Agradecemos tu comprensión.</p>
+      </div>
+      <div class="info-card">
+        <div class="info-card-icon" aria-hidden="true">&#9992;</div>
+        <h3 data-lang="info-travel-title">Invitados internacionales</h3>
+        <p data-lang="info-travel-text">Recomendamos hospedarte en Tenjo para mayor comodidad. Tenjo está a 1–2 horas de Bogotá dependiendo del tráfico.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo pair -->
+  <div class="photo-pair fade-in">
+    <img src="IMG_1327.jpg" alt="Diana y Mateo" loading="lazy">
+    <img src="IMG_1388.jpg" alt="Diana y Mateo" loading="lazy">
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <p class="footer-names">Diana & Mateo</p>
+    <p class="footer-date">08 . 08 . 2026</p>
+    <a href="https://www.magnoeventos.net/events/mateo-diana" target="_blank" rel="noopener" class="rsvp-btn" data-lang="rsvp-btn">Confirmar Asistencia</a>
+  </footer>
+
+  <script>
+    // ── Translations ──
+    const translations = {
+      es: {
+        'hero-amp': 'y',
+        'hero-date': '8 de Agosto, 2026',
+        'countdown-title': 'Faltan',
+        'cd-days': 'Días',
+        'cd-hours': 'Horas',
+        'cd-mins': 'Minutos',
+        'cd-secs': 'Segundos',
+        'rsvp-title': 'Confirma tu asistencia',
+        'rsvp-text': 'Tu presencia es el mejor regalo que podemos recibir. Por favor confirma tu asistencia.',
+        'rsvp-btn': 'Confirmar asistencia',
+        'ceremony-title': 'Ceremonia & Recepción',
+        'ceremony-subtitle': 'Todo en un solo lugar',
+        'venue-name': 'Hacienda El Jardín Secreto',
+        'venue-address': 'Km 4 vía Tenjo – La Punta, Tenjo, Cundinamarca',
+        'venue-datetime': 'Sábado 8 de Agosto, 2026 — 3:00 PM',
+        'travel-title': 'Cómo llegar',
+        'travel-1': 'Dirígete primero a Tenjo y luego toma la vía hacia la Hacienda.',
+        'travel-2': 'Importante:',
+        'travel-2b': 'Google Maps o Waze pueden sugerir rutas alternas con vías sin pavimentar o en mal estado. Evítalas y sigue la ruta principal por Tenjo.',
+        'travel-3': 'Tenjo está a 1–2 horas de Bogotá dependiendo del tráfico. Planifica con tiempo.',
+        'travel-4': 'Si la fiesta se extiende, recomendamos tener un conductor designado.',
+        'dress-title': 'Código de vestimenta',
+        'dress-formal': 'Traje formal',
+        'dress-women': 'Mujeres — Colores restringidos',
+        'dress-men': 'Hombres — Colores restringidos',
+        'color-black': 'Negro',
+        'color-red': 'Rojo',
+        'color-lightblue': 'Azul claro',
+        'color-darkblue': 'Azul oscuro',
+        'info-title': 'Información importante',
+        'info-envelope-title': 'Lluvia de sobres',
+        'info-envelope-text': 'Si deseas hacernos un regalo, lo recibiremos con mucho cariño en forma de sobre el día de la boda.',
+        'info-personal-title': 'Invitación Personal',
+        'info-personal-text': 'La invitación es personal e intransferible. Agradecemos tu comprensión.',
+        'info-travel-title': 'Invitados internacionales',
+        'info-travel-text': 'Recomendamos hospedarte en Tenjo para mayor comodidad. Tenjo está a 1–2 horas de Bogotá dependiendo del tráfico.',
+      },
+      en: {
+        'hero-amp': 'and',
+        'hero-date': 'August 8, 2026',
+        'countdown-title': 'Counting down',
+        'cd-days': 'Days',
+        'cd-hours': 'Hours',
+        'cd-mins': 'Minutes',
+        'cd-secs': 'Seconds',
+        'rsvp-title': 'Confirm your attendance',
+        'rsvp-text': 'Your presence is the best gift we could receive. Please confirm your attendance.',
+        'rsvp-btn': 'RSVP',
+        'ceremony-title': 'Ceremony & Reception',
+        'ceremony-subtitle': 'All in one place',
+        'venue-name': 'Hacienda El Jardín Secreto',
+        'venue-address': 'Km 4 via Tenjo – La Punta, Tenjo, Cundinamarca',
+        'venue-datetime': 'Saturday, August 8, 2026 — 3:00 PM',
+        'travel-title': 'How to get there',
+        'travel-1': 'Head to Tenjo first, then take the road towards the Hacienda.',
+        'travel-2': 'Important:',
+        'travel-2b': 'Google Maps or Waze may suggest alternate routes with unpaved or poorly maintained roads. Avoid them and stick to the main route through Tenjo.',
+        'travel-3': 'Tenjo is 1–2 hours from Bogotá depending on traffic. Plan ahead.',
+        'travel-4': 'If the party goes late, we recommend having a designated driver.',
+        'dress-title': 'Dress code',
+        'dress-formal': 'Formal attire',
+        'dress-women': 'Women — Restricted colors',
+        'dress-men': 'Men — Restricted colors',
+        'color-black': 'Black',
+        'color-red': 'Red',
+        'color-lightblue': 'Light blue',
+        'color-darkblue': 'Dark blue',
+        'info-title': 'Important information',
+        'info-envelope-title': 'Envelope rain',
+        'info-envelope-text': 'If you wish to give us a gift, we would be happy to receive it as a cash envelope on the wedding day.',
+        'info-personal-title': 'Personal invitation',
+        'info-personal-text': 'The invitation is personal and non-transferable. We appreciate your understanding.',
+        'info-travel-title': 'International guests',
+        'info-travel-text': 'We recommend staying in Tenjo for convenience. Tenjo is 1–2 hours from Bogotá depending on traffic.',
+      }
+    };
+
+    let currentLang = localStorage.getItem('wedding-lang') || 'es';
+
+    function setLang(lang) {
+      currentLang = lang;
+      localStorage.setItem('wedding-lang', lang);
+
+      document.getElementById('btn-es').classList.toggle('active', lang === 'es');
+      document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+      document.documentElement.lang = lang;
+
+      const strings = translations[lang];
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        const key = el.getAttribute('data-lang');
+        if (strings[key]) el.textContent = strings[key];
+      });
+    }
+
+    // Init language
+    setLang(currentLang);
+
+    // ── Countdown Timer ──
+    const weddingDate = new Date('2026-08-08T15:00:00-05:00');
+
+    function updateCountdown() {
+      const now = new Date();
+      const diff = weddingDate - now;
+
+      if (diff <= 0) {
+        document.getElementById('cd-days').textContent = '0';
+        document.getElementById('cd-hours').textContent = '0';
+        document.getElementById('cd-mins').textContent = '0';
+        document.getElementById('cd-secs').textContent = '0';
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById('cd-days').textContent = days;
+      document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+      document.getElementById('cd-mins').textContent = String(mins).padStart(2, '0');
+      document.getElementById('cd-secs').textContent = String(secs).padStart(2, '0');
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+
+    // ── Fade-in on Scroll ──
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15 }
+    );
+
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+    // Make hero content visible immediately
+    document.querySelector('.hero-content').classList.add('visible');
+  </script>
+
+</body>
+</html>
