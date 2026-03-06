@@ -459,10 +459,19 @@
       border-radius: 50%;
       border: 2px solid rgba(0, 0, 0, 0.08);
       position: relative;
+      overflow: hidden;
     }
 
     .color-circle::after {
-      display: none;
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -10%;
+      width: 120%;
+      height: 2.5px;
+      background: rgba(200, 30, 30, 0.9);
+      transform: translateY(-50%) rotate(-45deg);
+      border-radius: 2px;
     }
 
     .color-chip span {
